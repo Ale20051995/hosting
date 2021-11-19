@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.hero-image {
+  background-image: url("img/fondo1.jpg");
+  width: 100%;
+  height: 700px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  margin: auto;
+}
+
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+#sol_resolucion{
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    right: 1200px;
+    float: left;
+}
+
+#sol_resolucion:hover{
+  border:2px solid rgba(228, 228, 121, 0.747);
+  background: url(img/tiger.png) no-repeat;
+  -moz-box-shadow: 10px 10px 5px rgba(228, 228, 121, 0.747);
+  -webkit-box-shadow: 10px 25px 5px rgba(228, 228, 121, 0.747);
+  box-shadow: 2px 110px 20px 10px rgba(245, 245, 106, 0.822);
+  box-shadow: -17px 370px 55px 0px rgba(238, 238, 230, 0.747);
+  -moz-border-radius:25px;
+  -webkit-border-radius:150px;
+  border-radius:150px;
+  z-index: 2;
+}
+
+#sol_resolucion:hover ~ .Sol{
+    width: 120px;
+    height: 70px;
+    top: 40px;
+    position: absolute;
+    right: 1085px;
+    float: left;
+    border-radius:30px;
+    visibility: visible;
+    z-index: 3;
+}
+
+#sol_resolucion:hover ~ .Letra-Panel-solar{
+  width: 120px;
+    height: 70px;
+    border-radius: 30px;
+    position: absolute;
+    right: 1090px;
+    float: left;
+    top: 430px;
+    visibility: visible;
+    z-index: 3;
+}
+
+.Sol{
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    right: 1200px;
+    float: left;
+    visibility: hidden;
+}
+
+.Panel-solar{
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    right: 1200px;
+    float: left;
+    top: 394px;
+    z-index: 1;
+}
+
+.Panel-solar:hover ~ .Letra-Panel-solar{
+    width: 120px;
+    height: 70px;
+    border-radius: 30px;
+    position: absolute;
+    right: 1090px;
+    float: left;
+    top: 430px;
+    visibility: visible;
+    z-index: 3;
+}
+
+.Letra-Panel-solar{
+    width: 120px;
+    height: 70px;
+    border-radius: 30px;
+    position: absolute;
+    right: 1200px;
+    float: left;
+    top: 394px;
+    visibility: hidden;
+}
+
+.Letra-Molino-Viento{
+  width: 120px;
+    height: 70px;
+    border-radius: 30px;
+    position: absolute;
+    right: 774px;
+    float: left;
+    top: 424px;
+    z-index: 4;
+    visibility: hidden;
+}
+
+@keyframes rotating{
+			from{
+				transform:rotate(0deg);	
+			}
+			to{
+				transform:rotate(360deg);
+			}
+		}
+
+		.zhuan {
+    display: block;
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    right: 670px;
+    float: left;
+    top: 311px;
+    margin: 50px auto 0;
+    z-index: 4;
+		}
+
+    .zhuan:hover ~ .zhuan2:hover{
+    animation: rotating 2s linear infinite;
+    visibility: visible;
+		}
+
+    .zhuan2:hover ~ .zhuan:hover{
+    animation: rotating 2s linear infinite;
+    visibility: visible;
+		}
+
+
+    .Molino2{
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    right: 664px;
+    float: left;
+    top: 394px;
+    z-index: 2;
+}
+
+@keyframes rotating{
+			from{
+				transform:rotate(0deg);	
+			}
+			to{
+				transform:rotate(360deg);
+			}
+		}
+
+    .Molino{
+  width: 150px;
+    height: 150px;
+    position: absolute;
+    right: 600px;
+    float: left;
+    top: 394px;
+    z-index: 2;
+}
+
+		.zhuan2{
+    display: block;
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    right: 603px;
+    float: left;
+    top: 311px;
+    margin: 50px auto 0;
+    z-index: 4;
+		}
+
+    .Titulo{
+    position: absolute;
+    right: 700px;
+    top:20px;
+    float: left;
+    color: white;
+    font-size: 34px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0 auto;
+    }
+
+
+</style>
+</head>
+<body>
+
+<div class="hero-image">
+  <h4 class="Titulo">Energia Renovable</h4>
+  <img src="img/fondo1.jpg" width="100%" height="107%"  >
+  
+  <img src="img/sol.png" id="sol_resolucion" >
+  <img src="img/LetraSol.png" class="Sol">
+  <img src="img/panelsolar.png" class="Panel-solar">
+  <img src="img/LetraPanelSolar.png" class="Letra-Panel-solar">
+  <img src="img/Poste-Molino.png" alt="Imágenes de molinos de viento" class="Molino">
+  <img src="img/Molino.png" alt="Imágenes de molinos de viento" class="zhuan">
+  <img src="img/LetraMolino.png" class="Letra-Molino-Viento">
+
+  <img src="img/Poste-Molino.png" alt="Imágenes de molinos de viento" class="Molino2">
+  <img src="img/Molino.png" alt="Imágenes de molinos de viento" class="zhuan2">
+</div>
+<script>
+
+  </script> 
+
+
+</body>
+</html>
